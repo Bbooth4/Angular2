@@ -1,5 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-const helpers = require('./helpers');
+var helpers = require('./helpers');
 
 module.exports = {
   devtool: 'inline-source-map',
