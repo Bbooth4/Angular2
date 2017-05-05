@@ -6,6 +6,7 @@ import {
     RouterStateSnapshot
 } from '@angular/router';
 import * as firebase from 'firebase';
+require('dotenv').config; 
 
 
 @Injectable()
@@ -16,11 +17,12 @@ export class UserService implements CanActivate {
     
     constructor( private router: Router ) {
         firebase.initializeApp({
-            apiKey: "API Key Goes Here",
-    	    authDomain: "Auth Domain Goes Here",
-            databaseURL: "Database URL goes here",
-            storageBucket: "Storage bucket info goes here",
-            messagingSenderId: "Message Sender ID goes here"
+            apiKey: process.env.API_KEY,
+            authDomain: process.env.AUTH_DOMAIN,
+            databaseURL: process.env.DATABASE_URL,
+            projectId: process.env.PROJECT_ID,
+            storageBucket: process.env.STORAGE_BUCKET,
+            messagingSenderId: process.env.MESSAGING_SENDER_ID
         })
      }
 
