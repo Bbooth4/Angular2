@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {
-    CanActivate,
+import {  
+    CanActivate, 
     Router,
     ActivatedRouteSnapshot,
     RouterStateSnapshot
@@ -13,25 +13,25 @@ export class UserService implements CanActivate {
     userLoggedIn: boolean = false;
     loggedInUser: string;
     authUser: any;
-
+    
     constructor( private router: Router ) {
         firebase.initializeApp({
-        apiKey: "API Key goes here",
-        authDomain: "Auth Domain info goes here",
-        databaseURL: "Database URL goes here",
-        storageBucket: "Storage bucket goes here",
-        messagingSenderId: "Message sende ID goes here"
+            apiKey: "API Key Goes Here",
+    	    authDomain: "Auth Domain Goes Here",
+            databaseURL: "Database URL goes here",
+            storageBucket: "Storage bucket info goes here",
+            messagingSenderId: "Message Sender ID goes here"
         })
      }
 
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean { 
         let url: string = state.url;
         return this.verifyLogin(url);
-    }
+    }   
 
     verifyLogin(url: string): boolean {
         if (this.userLoggedIn) { return true; }
-
+                
         this.router.navigate(['/admin/login']);
         return false;
     }
