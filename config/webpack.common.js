@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
-
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
@@ -50,6 +50,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }), 
+
+    new Dotenv({
+      path: './.env',
+      safe: true
     })
     ]
 };

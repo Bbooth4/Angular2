@@ -21,6 +21,7 @@ const AdminRoutes: Routes = [
         ]
     },
 ];
+
 @NgModule({
     imports: [
         CommonModule,

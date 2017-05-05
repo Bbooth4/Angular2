@@ -6,8 +6,6 @@ import {
     RouterStateSnapshot
 } from '@angular/router';
 import * as firebase from 'firebase';
-require('dotenv').config; 
-
 
 @Injectable()
 export class UserService implements CanActivate {
