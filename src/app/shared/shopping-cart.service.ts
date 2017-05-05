@@ -9,8 +9,8 @@ export class ShoppingCartService {
         return Promise.resolve(this.myCart);
     }
 
-    addProduct(id: string,name: string, price: number){
-        this.myCart.push({'id': id, 'name': name, 'price': Number(price)})
+    addProduct(id: string, name: string, price: number){
+        this.myCart.push({'id': id, 'name': name, 'price': +price})
         alert(`${name} added to cart`);  
     }
 
