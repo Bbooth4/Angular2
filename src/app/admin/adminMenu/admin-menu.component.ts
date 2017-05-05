@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../adminShared/user.service';
+import {UserService} from '../adminShared/user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
  })
  
 export class AdminMenuComponent implements OnInit { 
-  theUser: string; 
+  theUser: string;
   
   constructor( private userSVC: UserService, private router: Router ){}
 

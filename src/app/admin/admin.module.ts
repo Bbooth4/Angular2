@@ -21,7 +21,6 @@ import { ProductAdminComponent }    from './productAdmin/product-admin.component
 import { ProductAddComponent }    from './productAdd/product-add.component';
 
 
-
 const AdminRoutes: Routes = [
     { 
         path: 'admin',  

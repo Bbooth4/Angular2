@@ -30,7 +30,7 @@ import { Blog } from '../admin/adminShared/blog';
                 let content = transform[0].content;
                 let imgTitle = transform[0].imgTitle;
                 let img = transform[0].img;
-                this.singlePost = new Blog (title,content,imgTitle, img);
+                this.singlePost = new Blog (title, content, imgTitle, img);
             });  
     };
 

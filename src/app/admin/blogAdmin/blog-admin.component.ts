@@ -61,8 +61,8 @@ export class BlogAdminComponent implements OnInit {
     }
 
     deletePost(single: Blog){
-        let verify = confirm(`Are you sure you want to delete this post?`)
-        if (verify == true) {
+        let verify = confirm(`Are you sure you want to delete this post?`);
+        if (verify === true) {
             this.blogAdminSVC.removePost(single);
             this.router.navigate(['/admin/']);
         } else {
